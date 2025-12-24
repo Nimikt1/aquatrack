@@ -4,16 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aquarium Tracker</title>
-    <!-- Link to our CSS file -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Main container for our app -->
     <div class="container">
         <!-- Page title -->
         <h1>Aquarium Tracker</h1>
         
-        <!-- Statistics section -->
         <div class="stats-section" id="statsSection" data-testid="stats-section">
             <div class="stat-item">
                 <span class="stat-label">Total Fish:</span>
@@ -24,45 +21,32 @@
                 <span class="stat-value" id="avgTankSize" data-testid="text-avg-tank-size">0 liters</span>
             </div>
         </div>
-        
-        <!-- Form section for adding fish -->
         <div class="form-section">
             <h2 id="formTitle">Add a New Fish</h2>
-            
-            <!-- Error message area -->
             <div class="error-message" id="errorMessage" data-testid="error-message"></div>
             
-            <!-- Fish name input -->
             <div class="form-group">
                 <label for="fishName">Fish Name:</label>
                 <input type="text" id="fishName" placeholder="Enter fish name" data-testid="input-fish-name">
             </div>
             
-            <!-- Tank size input -->
             <div class="form-group">
                 <label for="tankSize">Tank Size (liters):</label>
                 <input type="number" id="tankSize" placeholder="Enter tank size" min="1" data-testid="input-tank-size">
             </div>
             
-            <!-- Last water change date input -->
             <div class="form-group">
                 <label for="waterChangeDate">Last Water Change:</label>
                 <input type="date" id="waterChangeDate" data-testid="input-water-change">
             </div>
-            
-            <!-- Button container for add/edit and cancel -->
             <div class="button-group">
-                <!-- Add/Update fish button -->
                 <button id="addFishBtn" data-testid="button-add-fish">Add Fish</button>
                 <!-- Cancel edit button (hidden by default) -->
                 <button id="cancelEditBtn" class="cancel-btn hidden" data-testid="button-cancel-edit">Cancel</button>
             </div>
         </div>
-        
-        <!-- Section to display the list of fish -->
         <div class="fish-list-section">
             <h2>My Fish</h2>
-            <!-- This is where fish will be displayed -->
             <div id="fishList" data-testid="fish-list">
                 <p class="empty-message" id="emptyMessage">No fish added yet. Add your first fish above!</p>
             </div>
